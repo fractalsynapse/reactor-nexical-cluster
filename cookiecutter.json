@@ -1,20 +1,48 @@
 {
-  "project_name": "Zimagi Cluster",
+  "project_name": "Nexical Cluster",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
   "open_source_license": [
     "apache2",
     "none"
   ],
   "ingress_node_port": "32210",
+  "argocd_admin_password": "admin",
+  "github_org": "",
+  "github_deploy_key": "",
+  "mailgun_domain": "",
+  "mailgun_api_key": "",
+  "mailgun_webhook_key": "",
+  "from_email": "",
+  "contact_email": "",
+  "admin_email_smtp_domain": "smtp.gmail.com",
+  "admin_email_smtp_port": 587,
+  "admin_email_smtp_user": "",
+  "admin_email_smtp_password": "",
+  "huggingface_api_key": "",
+  "deepinfra_api_key": "",
   "__prompts__": {
     "project_name": "Cluster project human readable name",
     "project_slug": "Project short name (lowercase alphanumeric and underscores only)",
-    "ingress_node_port": "Primary host ingress node port",
     "open_source_license": {
       "__prompt__": "Include open source license?",
       "apache2": "Apache Software License 2.0",
       "none": "Not open source"
-    }
+    },
+    "ingress_node_port": "Primary host ingress node port",
+    "argocd_admin_password": "ArgoCD administrator password",
+    "github_org": "Primary Zimagi module Github organization",
+    "github_deploy_key": "Primary Zimagi module Github deploy key",
+    "mailgun_domain": "Mailgun email domain",
+    "mailgun_api_key": "Mailgun API key",
+    "mailgun_webhook_key": "Mailgun webhook key",
+    "from_email": "Site notification FROM email address",
+    "contact_email": "Site contact email address",
+    "admin_email_smtp_domain": "Zimagi administrative email SMTP server domain",
+    "admin_email_smtp_port": "Zimagi administrative email SMTP server port",
+    "admin_email_smtp_user": "Zimagi administrative email SMTP server user",
+    "admin_email_smtp_password": "Zimagi administrative email SMTP server password",
+    "huggingface_api_key": "Huggingface API key",
+    "deepinfra_api_key": "DeepInfra API key"
   },
   "_copy_without_render": [
     "argocd",

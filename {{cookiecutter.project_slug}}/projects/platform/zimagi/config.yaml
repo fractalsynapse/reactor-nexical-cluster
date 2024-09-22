@@ -21,16 +21,26 @@ global:
     ZIMAGI_DISABLE_MODULE_INIT: false
     ZIMAGI_DISABLE_MODULE_SYNC: true
 
-    ZIMAGI_EMAIL_HOST: smtp.gmail.com
-    ZIMAGI_EMAIL_PORT: 587
+    ZIMAGI_EMAIL_HOST: "${ZIMAGI_EMAIL_HOST_DOMAIN}"
+    ZIMAGI_EMAIL_PORT: "${ZIMAGI_EMAIL_HOST_PORT}"
     ZIMAGI_EMAIL_USE_TLS: true
-    ZIMAGI_EMAIL_SUBJECT_PREFIX: "[Zimagi]> "
+    ZIMAGI_EMAIL_SUBJECT_PREFIX: "[Nexical]> "
 
     ZIMAGI_LIB_PVC: ""
     ZIMAGI_HOST_APP_DIR: "${__zimagi_app_dir}"
     ZIMAGI_HOST_LIB_DIR: "${__zimagi_lib_dir}"
 
-    ZIMAGI_DEFAULT_MODULES: '[]'
+    ZIMAGI_QDRANT_HOST: qdrant
+    ZIMAGI_QDRANT_PORT: 6333
+    ZIMAGI_QDRANT_HTTPS: true
+
+    ZIMAGI_DEFAULT_MODULES: '[{"provider": "github", "remote": "fractalsynapse/nexical-core-engine", "reference": "main"}]'
+
+    ZIMAGI_SENTENCE_PARSER_PROVIDERS: '["core_en_web"]'
+    ZIMAGI_ENCODER_PROVIDERS: '["mpnet_di"]'
+    ZIMAGI_SUMMARIZER_PROVIDERS: '["mixtral_di_7bx8"]'
+
+    ZIMAGI_DEFAULT_PORTAL: interface
 
 command-api:
   data:

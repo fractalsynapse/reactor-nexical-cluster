@@ -19,6 +19,20 @@ SUCCESS = "\x1b[1;32m [SUCCESS]: "
 # from values
 """
 {{ cookiecutter.update({ "ingress_node_port": cookiecutter.ingress_node_port | trim }) }}
+{{ cookiecutter.update({ "argocd_admin_password": cookiecutter.argocd_admin_password | trim }) }}
+{{ cookiecutter.update({ "github_org": cookiecutter.github_org | trim }) }}
+{{ cookiecutter.update({ "github_deploy_key": cookiecutter.github_deploy_key | trim }) }}
+{{ cookiecutter.update({ "mailgun_domain": cookiecutter.mailgun_domain | trim }) }}
+{{ cookiecutter.update({ "mailgun_api_key": cookiecutter.mailgun_api_key | trim }) }}
+{{ cookiecutter.update({ "mailgun_webhook_key": cookiecutter.mailgun_webhook_key | trim }) }}
+{{ cookiecutter.update({ "from_email": cookiecutter.from_email | trim }) }}
+{{ cookiecutter.update({ "contact_email": cookiecutter.contact_email | trim }) }}
+{{ cookiecutter.update({ "admin_email_smtp_domain": cookiecutter.admin_email_smtp_domain | trim }) }}
+{{ cookiecutter.update({ "admin_email_smtp_port": cookiecutter.admin_email_smtp_port | trim }) }}
+{{ cookiecutter.update({ "admin_email_smtp_user": cookiecutter.admin_email_smtp_user | trim }) }}
+{{ cookiecutter.update({ "admin_email_smtp_password": cookiecutter.admin_email_smtp_password | trim }) }}
+{{ cookiecutter.update({ "huggingface_api_key": cookiecutter.huggingface_api_key | trim }) }}
+{{ cookiecutter.update({ "deepinfra_api_key": cookiecutter.deepinfra_api_key | trim }) }}
 """
 
 project_slug = "{{ cookiecutter.project_slug }}"

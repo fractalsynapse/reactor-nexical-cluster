@@ -15,6 +15,12 @@ docker:
         reference: reactor
         docker_dir: docker
         docker_tag: dev
+
+    nexical_interface:
+        remote: https://github.com/fractalsynapse/nexical-core-interface.git
+        reference: main
+        docker_dir: compose/production/django
+        docker_tag: dev
 #
 # Helm chart projects (map of charts)
 #
@@ -28,6 +34,11 @@ charts:
        remote: https://github.com/zimagi/charts.git
        reference: main
        chart_dir: charts/zimagi
+
+    nexical-core-interface:
+       remote: https://github.com/fractalsynapse/nexical-charts.git
+       reference: main
+       chart_dir: charts/nexical-core-interface
 #
 # Reactor extension projects (map of extensions)
 #
