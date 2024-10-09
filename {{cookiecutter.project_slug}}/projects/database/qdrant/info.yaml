@@ -1,4 +1,4 @@
-enabled: true
+enabled: ["all"]
 
 name: qdrant
 repository: https://qdrant.github.io/qdrant-helm/

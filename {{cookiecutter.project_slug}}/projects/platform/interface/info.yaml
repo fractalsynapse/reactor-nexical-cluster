@@ -1,4 +1,4 @@
-enabled: true
+enabled: ["all"]
 
 name: interface
 repository: "https://fractalsynapse.github.io/nexical-charts"
